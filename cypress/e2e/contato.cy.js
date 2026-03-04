@@ -3,7 +3,7 @@ describe('Funcionalidade: Contato', () => {
   beforeEach(() => {
     cy.visit("index.html")
 
- });
+  });
 
   it("Deve preencher formulário de contato com sucesso", () => {
 
@@ -49,14 +49,11 @@ describe('Funcionalidade: Contato', () => {
     cy.get('#alert-container').should("contain", "Por favor, selecione o Assunto.")
   });
 
-
-
   it('Deve validar mensagem de erro ao enviar sem preencher a mensagem', () => {
 
     cy.get('[name="name"]').type("karina oliveira")
     cy.get('[name="email"]').type("karina@teste.com")
     cy.get('[name="subject"]').select("Parcerias")
-
     cy.get('#btn-submit').click()
     //resultado esperado
     cy.get('#alert-container').should("contain", "Por favor, escreva sua Mensagem.")
