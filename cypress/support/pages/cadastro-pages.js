@@ -17,8 +17,8 @@ class CadastroPages {
 
     preencherCadastro(nome, email, telefone, senha, confirmarSenha) {
 
-        if(nome) this.campoNome().clear().type(nome)
-        if(email) this.campoEmail().clear().type(email)
+        if (nome) this.campoNome().clear().type(nome)
+        if (email) this.campoEmail().clear().type(email)
         this.campoTelefone().clear().type(telefone)
         this.campoSenha().clear().type(senha)
         this.campoConfirmarSenha().clear().type(confirmarSenha)
